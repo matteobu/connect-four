@@ -1,0 +1,311 @@
+body {
+    background-color: #87a8a4;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 0;
+}
+
+#popUpOpacity {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#popUpVictory {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: 1s;
+}
+
+.opacity {
+    opacity: 0.2;
+}
+
+.buttonContainer {
+    border-radius: 25px;
+    background-color: #c8c6c6;
+    border-bottom: 10px solid #d5eebb;
+    border-right: 10px solid #d5eebb;
+    border-top: 2px solid #7fc8a9;
+    border-left: 2px solid #7fc8a9;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    font-weight: bold;
+    color: #5f7a61;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 50px 50px 1fr;
+}
+.input-player-one {
+    position: relative;
+    top: 20px;
+    height: 20px;
+    width: 200px;
+    padding: 10px 0 10px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    color: #377d6a;
+    background: #334756;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    grid-row: 1;
+}
+.input-player-two {
+    position: relative;
+    top: 20px;
+    height: 20px;
+    width: 200px;
+    padding: 10px 0 10px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    color: #377d6a;
+    background: #df2e2e;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    grid-row: 2;
+}
+#btn {
+    top: 60%;
+    width: 200px;
+    height: 50px;
+    background-color: #d5eebb;
+    position: relative;
+    border: 1px solid #5f7a61;
+    border-radius: 15px;
+    justify-content: center;
+    font-size: 20px;
+    color: #7fc8a9;
+    font-weight: bold;
+    grid-row: 3;
+}
+
+#buttonVictory {
+    border-radius: 25px;
+    border-bottom: 10px solid #d5eebb;
+    border-right: 10px solid #d5eebb;
+    border-top: 2px solid #7fc8a9;
+    border-left: 2px solid #7fc8a9;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    font-weight: bold;
+    color: #f43b86;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 300px 100px;
+    overflow: hidden;
+}
+.win {
+    top: 100px;
+    position: relative;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f7f6f2;
+    grid-row: 1;
+    justify-self: center;
+}
+#btnVctr {
+    width: 200px;
+    height: 50px;
+    background-color: #c8c6c6;
+    position: relative;
+    border: 1px solid #969191;
+    border-radius: 15px;
+    justify-self: center;
+    color: #969191;
+    font-weight: bold;
+    overflow: visible;
+    grid-row: 2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 15px;
+}
+
+/* // LEGENDA !! // */
+
+.currentPlayer {
+    display: grid;
+    grid-template-rows: repeat(2, 50px);
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 300px;
+}
+
+.colorLegend {
+    display: grid;
+    grid-template-rows: repeat(2, 50px);
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.playerLegend {
+    display: grid;
+    grid-template-rows: repeat(2, 50px);
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 56px;
+    justify-content: start;
+}
+
+/* // SELEZIONE COLONNA GIOCATORE DROP DOWN */
+
+.boardGame {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transform: translateY(15%);
+}
+
+.rowSei {
+    transform: translateY(732%);
+}
+
+.slotGame {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+.holeGame {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 50px solid #87a8a4;
+    position: relative;
+    left: -40px;
+    top: -40px;
+}
+
+.giocatoreUno {
+    background-color: #334756;
+    color: #334756;
+}
+
+.giocatoreDue {
+    background-color: #df2e2e;
+    color: #df2e2e;
+}
+.on {
+    transform: translateX(2%);
+    transform: translateY(32%);
+}
+
+#cerchio {
+    border-radius: 50%;
+    border: 30px solid;
+    position: absolute;
+    border: 30px solid;
+    left: 32%;
+    top: 2%;
+}
+
+/* //// COLONNE E FORI */
+#board {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+.column {
+    align-self: flex-end;
+}
+
+.slot {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.hole {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 50px solid #d9cab3;
+    position: relative;
+    left: -40px;
+    top: -40px;
+}
+
+/* // PLAYER ONE // */
+
+.textPlayerOne {
+    align-self: flex-end;
+    color: #334756;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 900;
+    /* border-bottom: 3px solid #334756;
+    border-left: 3px solid #334756; */
+}
+
+.colorPlayerOne {
+    background: #334756;
+    border: 8px solid #334756;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+.colorColumns {
+    background: black;
+    transition: 1s;
+}
+
+.player1 .hole {
+    background-color: #334756;
+    transition: 1s;
+}
+
+/* // PLAYER TWO // */
+
+.textPlayerTwo {
+    align-self: flex-end;
+    color: #df2e2e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 900;
+    /* border-left: 3px solid #FF4C29;
+    border-bottom: 3px solid #FF4C29; */
+}
+
+.colorPlayerTwo {
+    border: 8px solid #df2e2e;
+    background: #df2e2e;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+
+.player2 .hole {
+    background-color: #df2e2e;
+    transition: 1s;
+}
